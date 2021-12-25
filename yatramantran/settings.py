@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'yatramantran.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'YatraAmantran',
+        'NAME': 'yatraamantran',
         'USER': 'admin',
         'PASSWORD':'yatraamantran',
         'HOST' : 'localhost',
