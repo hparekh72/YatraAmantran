@@ -10,7 +10,7 @@ def home(request):
 def newsDetail(request,myid):
     all = News.objects.all().order_by('-id')
     news = News.objects.get(id=myid)
-    magazines = E_Magazine.objects.latest('id')
+    magazines = E_Magazine.objects.all().order_by('-id')
     # print(news)
     relatedPost = []
     count = 0
@@ -30,7 +30,7 @@ def about(request):
 
 def news(request):
     news = News.objects.all().order_by('-id')
-    magazines = E_Magazine.objects.latest('id')
+    magazines = E_Magazine.objects.all().order_by('-id')
     return render(request,'News.html',{'news':news,'magazines':magazines})
 
 def join(request):
