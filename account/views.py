@@ -3,7 +3,7 @@ from .models import *
 # Create your views here.
 def home(request):
     news = News.objects.all().order_by('-id')
-    magazines = E_Magazine.objects.latest('id')
+    magazines = E_Magazine.objects.all().order_by('-id')
     # print(magazines)
     return render(request,'tech-index.html',{'news':news,'magazines':magazines})
 
